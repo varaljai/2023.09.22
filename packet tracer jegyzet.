@@ -1,0 +1,34 @@
+3 féle vlan közzöti forgalom:
+-hagyományos
+
+létre hozzuk a interface_id_-t és a pont 10. a alinterface lesz
+encapulation
+dotq1 írja le a trunk modot.
+Step 1:Create VLANs on both switches.
+Open configuration window
+
+Create and name the required VLANs on each switch from the table above.
+S1(config)# vlan 3
+
+S1(config-vlan)# name Management
+S1(config-vlan)# vlan 4
+S1(config-vlan)# name Operations
+S1(config-vlan)# vlan 7
+S1(config-vlan)# name ParkingLot
+S1(config-vlan)# vlan 8
+S1(config-vlan)# name Native
+
+hiányzó vlan megnézése:
+- show vlan brief
+-két switch között legyen nati vlan mert ha nem fogg müködni 
+-nati vlan nem szoktunk ...
+-nati vlan mindenkép az 1 
+-megfelelő porthoz van e köttve ? : show interfaces switchport
+-show running-config interface
+-tunk modba konfigorálunk nme accessben 
+- allinterface : rossz ip cím
+A-1
+B-8
+C-15
+
+mindenpcnél a szerver ip a dns
